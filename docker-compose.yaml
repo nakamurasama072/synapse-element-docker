@@ -19,7 +19,7 @@ services:
       VIRTUAL_PORT: "8008" # YOU SHOULD NOT MODIFY THIS
       LETSENCRYPT_HOST: "synapse.yourhost.domain"
       SYNAPSE_SERVER_NAME: "synapse.yourhost.domain"
-      SYNAPSE_REPORT_STATS: "yes"
+      SYNAPSE_REPORT_STATS: "no"
   element-web:
     ports:
       - "8009:80"

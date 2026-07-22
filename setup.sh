@@ -136,11 +136,6 @@ enable_registration: true\
 enable_registration_without_verification: true' "$1/homeserver.yaml"
 }
 
-# # Change the port that synapse will run on in homeserver.yaml
-# change_running_port() {
-#   sed -i "s/port: 8008/port: $1/g" "$2/homeserver.yaml"
-# }
-
 # Get the port that element-web will run on
 get_element_web_port() {
   local port
@@ -231,7 +226,7 @@ services:
       VIRTUAL_PORT: "8008"
       LETSENCRYPT_HOST: "$3"
       SYNAPSE_SERVER_NAME: "$3"
-      SYNAPSE_REPORT_STATS: "yes"
+      SYNAPSE_REPORT_STATS: "no"
   element-web:
     ports:
       - "$4:80"
